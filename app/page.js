@@ -2,6 +2,6 @@
 
 export default function Page() {
   return (
-    <h1>Hello Next.js</h1>
+    <h1>The wild oasis. Welcome to the paradise.</h1>
   );
 }

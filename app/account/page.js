@@ -1,8 +1,11 @@
-function Page() {
+import Navigation from "@/app/components/Navigation";
 
-    return (
-        <h1>Accounts page</h1>
-    )
+function Page() {
+  return (
+    <div>
+      <h1>Accounts page</h1>
+    </div>
+  );
 }
 
-export default Page
+export default Page;

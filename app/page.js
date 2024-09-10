@@ -1,7 +1,10 @@
-
+import Link from "next/link";
+import Navigation from "@/app/components/Navigation";
 
 export default function Page() {
   return (
-    <h1>The wild oasis. Welcome to the paradise.</h1>
+    <div>
+      <h1>The wild oasis. Welcome to the paradise.</h1>
+    </div>
   );
 }

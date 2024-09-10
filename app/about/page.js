@@ -1,5 +1,9 @@
+import Navigation from "@/app/components/Navigation";
+
 export default function Page() {
   return (
-    <h1>About us</h1>
+    <div>
+      <h1>About us</h1>
+    </div>
   );
 }

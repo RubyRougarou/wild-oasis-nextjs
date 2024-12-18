@@ -1,13 +1,9 @@
 "use client";
 import { useState } from "react";
 import { updateProfile } from "@/app/_lib/actions";
-import { useFormStatus } from "react-dom"; // bcs we are using useState() we must make component a client one!!
-
-// CHANGE
+import SubmitButton from "@/app/_components/SubmitButton"; // bcs we are using useState() we must make component a client one!!
 
 export default function UpdateProfileForm({ children, guest }) {
-  const [count, setCount] = useState(0);
-
   const { fullName, email, nationality, nationalID, countryFlag } = guest;
 
   return (
@@ -57,20 +53,8 @@ export default function UpdateProfileForm({ children, guest }) {
       </div>
 
       <div className="flex justify-end items-center gap-6">
-        <Button />
+        <SubmitButton pendingLabel={"Updating..."}>Update profile</SubmitButton>
       </div>
     </form>
-  );
-}
-
-function Button() {
-  const { pending } = useFormStatus();
-  return (
-    <button
-      className="bg-accent-500 px-8 py-4 rounded-md text-primary-800 font-semibold hover:bg-accent-600 transition-all disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-gray-300"
-      disabled={pending}
-    >
-      {pending ? "Updating..." : "Update profile"}
-    </button>
   );
 }
